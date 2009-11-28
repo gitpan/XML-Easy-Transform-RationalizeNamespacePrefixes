@@ -4,7 +4,7 @@ use base qw(Exporter);
 use strict;
 use warnings;
 
-our $VERSION = "1.20";
+our $VERSION = "1.21";
 our @EXPORT_OK;
 
 use Carp::Clan;
