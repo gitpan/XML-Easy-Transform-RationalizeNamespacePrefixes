@@ -4,7 +4,7 @@ use base qw(Exporter);
 use strict;
 use warnings;
 
-our $VERSION = "1.21";
+our $VERSION = "1.22";
 our @EXPORT_OK;
 
 use Carp::Clan;
@@ -185,7 +185,7 @@ of this function.
       # record that this prefix maps to this namespace;
       $known_prefixes->{ $prefix } = $ns;
 
-      unless ($assigned_ns->{ $ns }) {
+      unless (exists $assigned_ns->{ $ns }) {
         # find an unused unique prefix in the destination.
         while (exists $assigned_prefixes->{ $prefix }) {
           $prefix = $prefix_generator->($prefix);
@@ -375,9 +375,11 @@ and/or modify it under the same terms as Perl itself.
 
 =head1 BUGS
 
-Please see http://www.twoshortplanks.com/project/xml-easy-transform-rationalizenamespaceprefix
-for details of how to submit bugs, access the source control
-for this project, and contact the author.
+None known.
+
+Please report bugs via RT L<https://rt.cpan.org/Ticket/Create.html?Queue=XML-Easy-Transform-RationalizeNamespacePrefixes>.
+
+The version control system for this module is hosted on github.  Please feel free to fork L<http://github.com/2shortplanks/xml-easy-transform-rationalizenamespaceprefixes> and send pull requests.
 
 =head1 SEE ALSO
 
